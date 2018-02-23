@@ -1,0 +1,23 @@
+{
+  "name": "chat-typescript",
+  "version": "1.0.0",
+  "description": "Chat Typescript",
+  "main": "chat.js",
+  "dependencies": {
+    "colors": "^1.1.2",
+    "socket.io": "^2.0.4"
+  },
+  "devDependencies": {
+    "@types/colors": "^1.1.2",
+    "@types/node": "^9.4.6",
+    "@types/socket.io": "^1.4.31",
+    "gulp": "^3.9.1",
+    "gulp-typescript": "^4.0.1",
+    "typescript": "^2.7.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sapão",
+  "license": "ISC"
+}
