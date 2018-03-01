@@ -1,17 +1,5 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var UserColors;
-(function (UserColors) {
-    UserColors["BLACK"] = "black";
-    UserColors["RED"] = "red";
-    UserColors["GREEN"] = "green";
-    UserColors["YELLOW"] = "yellow";
-    UserColors["BLUE"] = "blue";
-    UserColors["MAGENTA"] = "magenta";
-    UserColors["CYAN"] = "cyan";
-    UserColors["WHITE"] = "white";
-    UserColors["GRAY"] = "gray";
-})(UserColors = exports.UserColors || (exports.UserColors = {}));
 var UserConnection = /** @class */ (function () {
     function UserConnection(socket) {
         this.socket = socket;
