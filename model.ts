@@ -1,29 +1,13 @@
-
-interface Message {
-	name: string;
-	message: string;
-}
-
-export class UserMessage implements Message {
-	private data: Message;
-
-	constructor(payload: string) {
-		var data = JSON.parse(payload);
-
-		if (!data.name || !data.message) {
-			throw new Error('Invalid message payload received: ' + payload);
-		}
-
-		this.data = data;
-	}
-
-	get name(): string {
-		return this.data.name;
-	}
-
-	get message(): string {
-		return this.data.message;
-	}
+export enum UserColors {
+	BLACK = 'black',
+	RED = 'red',
+	GREEN = 'green',
+	YELLOW = 'yellow',
+	BLUE = 'blue',
+	MAGENTA = 'magenta',
+	CYAN = 'cyan',
+	WHITE = 'white',
+	GRAY = 'gray'
 }
 
 export class UserConnection 
