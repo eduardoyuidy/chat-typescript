@@ -4,6 +4,7 @@ import * as colors from "colors";
 import * as readline from "readline"; 
 import * as uuid from "uuid/v1"; 
 import {UserDetails} from "./../model";
+import {UserColors} from "./../model";
 
 
 let socket = socketIO('http://localhost:3000');
@@ -11,7 +12,6 @@ let readlineStream = readline.createInterface({
     input: process.stdin,
     output: process.stdout
 });
-
 let currUser = new UserDetails('', 
                                '',
                                uuid());
