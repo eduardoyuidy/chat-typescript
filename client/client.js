@@ -10,8 +10,7 @@ var readlineStream = readline.createInterface({
     input: process.stdin,
     output: process.stdout
 });
-var userColors = ['black', 'red', 'green', 'yellow', 'blue', 'magenta', 'cyan', 'white', 'gray', 'grey'];
-var currUser = new model_1.UserDetails('', userColors[Math.floor(Math.random() * userColors.length)], uuid());
+var currUser = new model_1.UserDetails('', '', uuid());
 socket.on('connect', function () {
     readlineStream.question(colors.bgRed('Informe seu nome de usuário: '), function (name) {
         currUser.username = name || 'anônimo';
@@ -25,7 +24,6 @@ socket.on('connect', function () {
 });
 socket.on('broadcast', function (user, message) {
     if (user.id !== currUser.id) {
-        var userColor = user.color;
-        console.log(user.username + ': ' + message);
+        console.log((user.username + ': ' + message));
     }
 });

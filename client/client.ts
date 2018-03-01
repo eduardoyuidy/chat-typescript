@@ -5,14 +5,14 @@ import * as readline from "readline";
 import * as uuid from "uuid/v1"; 
 import {UserDetails} from "./../model";
 
+
 let socket = socketIO('http://localhost:3000');
 let readlineStream = readline.createInterface({
     input: process.stdin,
     output: process.stdout
 });
-let userColors = ['black', 'red', 'green', 'yellow', 'blue', 'magenta', 'cyan', 'white', 'gray', 'grey'];
 let currUser = new UserDetails('', 
-                               userColors[Math.floor(Math.random() * userColors.length)],
+                               '',
                                uuid());
 
 socket.on('connect', function () {
@@ -32,8 +32,7 @@ socket.on('connect', function () {
 
 socket.on('broadcast', function (user : UserDetails, message: string) {
     if (user.id !== currUser.id) {
-        var userColor : string = user.color;
-        console.log(user.username + ': ' + message);
+        console.log((user.username + ': ' + message));
     }
 });
 
