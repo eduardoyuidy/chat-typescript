@@ -5,12 +5,14 @@
   "main": "chat.js",
   "dependencies": {
     "colors": "^1.1.2",
-    "socket.io": "^2.0.4"
+    "http": "0.0.0",
+    "socket.io": "^2.0.4",
+    "socket.io-client": "^2.0.4"
   },
   "devDependencies": {
     "@types/colors": "^1.1.2",
     "@types/node": "^9.4.6",
-    "@types/socket.io": "^1.4.31",
+    "@types/socket.io": "^1.4.33",
     "gulp": "^3.9.1",
     "gulp-typescript": "^4.0.1",
     "typescript": "^2.7.2"

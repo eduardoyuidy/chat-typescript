@@ -1,12 +1,12 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var http = require("http");
-var socketIO = require("socket.io");
+var SocketIO = require("socket.io");
 var colors = require("colors");
 var model_1 = require("./../model");
 var users = [];
 var httpServer = http.createServer();
-var ioServer = socketIO(httpServer);
+var ioServer = SocketIO(httpServer);
 httpServer.listen(3000, function () {
     console.log(colors.rainbow('Bem vindo ao bate papo Coffee&Code JOI!'));
 });

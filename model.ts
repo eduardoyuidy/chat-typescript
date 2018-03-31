@@ -1,8 +1,8 @@
 export class UserConnection 
 {
-	public socket:SocketIO.Socket;
+	public socket: SocketIO.Socket;
 	public user!:UserDetails;
-	constructor(socket:SocketIO.Socket)
+	constructor(socket: SocketIO.Socket)
 	{
 		this.socket = socket;
 	}
@@ -11,8 +11,7 @@ export class UserConnection
 
 export class UserDetails
 {
-	constructor(public username: string, public color:string = '', public id: string = '', )
+	constructor(public username: string, public color: string = '', public id: string = '' )
 	{
-	}
-	
+	}	
 }
